@@ -1,0 +1,42 @@
+plugins {
+
+    id 'java'
+    id 'com.gradle.build-scan' version '2.1'
+    id 'org.springframework.boot' version '2.1.4.RELEASE'
+}
+
+
+repositories {
+     jcenter()
+}
+
+dependencies {
+	compile group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: '2.1.4.RELEASE', ext: 'pom'
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.4.RELEASE'
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-hystrix', version: '2.1.2.RELEASE'
+    compile group: 'de.flapdoodle.embed', name: 'de.flapdoodle.embed.mongo', version: '2.2.0'
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-hystrix-dashboard', version: '2.1.2.RELEASE'   
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.1.4.RELEASE'
+	compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.1.4.RELEASE'
+	compileOnly 'org.projectlombok:lombok:1.18.4'
+    testCompileOnly 'org.projectlombok:lombok:1.18.4'
+    annotationProcessor 'org.projectlombok:lombok:1.18.4'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.4'
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.1.4.RELEASE'
+	compile group: 'net.sf.ehcache', name: 'ehcache', version: '2.9.1'
+	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.4.RELEASE'
+	testCompile group: 'io.rest-assured', name: 'spring-mock-mvc', version: '3.0.0'
+	components {
+        withModule('org.springframework:spring-beans') {
+            allVariants {
+                withDependencyConstraints {
+                    // Need to patch constraints because snakeyaml is an optional dependency
+                    it.findAll { it.name == 'snakeyaml' }.each { it.version { strictly '1.19' } }
+                }
+            }
+        }
+    }
+	
+}
