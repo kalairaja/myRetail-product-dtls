@@ -30,14 +30,14 @@ To the given problem, Spring Boot architecture would be the preferred design for
 ### Architecture Style
 ![Arch](src/main/resources/images/Arch_Style.PNG)
 ### Sequence Diagram
-![Sequence](product-info/src/main/resources/images/Microservice-seq.PNG)
+![Sequence](src/main/resources/images/Microservice-seq.PNG)
 ### API Documentation
 See Swagger <http://localhost:8883/swagger-ui.html#/>.
-![Swagger](myRetail-product-dtls/src/main/resources/images/swagger.PNG)
+![Swagger](src/main/resources/images/swagger.PNG)
 
 ### Test Approach
 #### Junit Test Result / Code Coverage
-![UnitTest](myRetail-product-dtls/src/main/resources/images/UnitTestResult.PNG)
+![UnitTest](src/main/resources/images/UnitTestResult.PNG)
 
 #### Use Swagger Test
 Url <http://localhost:8083/swagger-ui.html> to test the application.
@@ -45,4 +45,4 @@ Url <http://localhost:8083/swagger-ui.html> to test the application.
 ### Hystrix Dashboard
 Input browser with <http://localhost:8883/hystrix>, Enter hystrix stream Url as <http://localhost:8089/monitor/hystrix.stream> .
 Trigger a GET or PUT call. You will be able to see the Hystrix Dashboard as below. The Circuit Open will be enabaled when the system sense there is more than 50% of request is unsuccessful/errored while connecting to external / DB.
-![Hystrix](myRetail-product-dtls/src/main/resources/images/Hystrix.PNG)
+![Hystrix](src/main/resources/images/Hystrix.PNG)
