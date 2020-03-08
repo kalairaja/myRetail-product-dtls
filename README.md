@@ -28,7 +28,7 @@ To the given problem, Spring Boot architecture would be the preferred design for
 ### Technologies
 - Java8, Gradle, Spring Boot 2.1.4, Embedded Mongo DB, EhCache, Hystrix Circuit Breaker, Hystrix Dashboard, Swagger2, Rx Java.
 ### Architecture Style
-![Arch](myRetail-product-dtls/src/main/resources/images/Arch_Style.PNG)
+![Arch](src/main/resources/images/Arch_Style.PNG)
 ### Sequence Diagram
 ![Sequence](product-info/src/main/resources/images/Microservice-seq.PNG)
 ### API Documentation
