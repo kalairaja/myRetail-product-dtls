@@ -6,16 +6,18 @@ The goal for this project is to create an end-to-end Proof-of-Concept for a prod
 ### Pre Requisite
 Java 8 or 11 and Gradle 5 Installation
 
-### Code Set up & Deployment
+### Local Code Set up & Deployment
 1. Clone the Project : https://github.com/kalairaja/myRetail-product-dtls.git
 2. Open terminal and navigate to Project location myRetail-product-dtls/
 3. Run gradle build and bootRun
 4. Test API with Swagger :<http://localhost:8883/swagger-ui.html> or Postman
 
 ## Test Data
-    GET Product id: 13860428,13860500,13860600
+    GET http://localhost:8883/retail/products/{id}
+    GET Product {id}: 13860428,13860500,13860600
 
-    PUT : {
+    PUT http://localhost:8883/retail/products/13860428
+    PUT Request Body: {
               "id": 13860428
               "current_price": {
               "value": 106.99,
@@ -26,7 +28,7 @@ Java 8 or 11 and Gradle 5 Installation
 ## Design, Development, Build, Deploy and Test Approach
 To the given problem, Spring Boot architecture would be the preferred design for A fast, lightweight and more productive micro-services framework. The following technologies has been considered for the approach.
 ### Technologies
-- Java8, Gradle, Spring Boot 2.1.4, Embedded Mongo DB, EhCache, Hystrix Circuit Breaker, Hystrix Dashboard, Swagger2, Rx Java.
+- Java8 or 11, Gradle, Spring Boot 2.1.4, Embedded Mongo DB, EhCache, Hystrix Circuit Breaker, Hystrix Dashboard, Swagger2, Rx Java.
 ### Architecture Style
 ![Arch](src/main/resources/images/Arch_Style.PNG)
 ### Sequence Diagram
