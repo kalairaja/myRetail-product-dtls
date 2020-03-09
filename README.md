@@ -45,6 +45,8 @@ To the given problem, Spring Boot architecture would be the preferred design for
 See Swagger <http://localhost:8883/swagger-ui.html#/>.
 ![Swagger](src/main/resources/images/swagger.PNG)
 
+### Sonar Code Review and Vulneranbility check (Done)
+
 ### Test Approach
 #### Junit Test Result / Code Coverage
 ![UnitTest](src/main/resources/images/UnitTestResult.PNG)
