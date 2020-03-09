@@ -58,3 +58,16 @@ Url <http://localhost:8083/swagger-ui.html> to test the application.
 Input browser with <http://localhost:8883/hystrix>, Enter hystrix stream Url as <http://localhost:8089/monitor/hystrix.stream> .
 Trigger a GET or PUT call. You will be able to see the Hystrix Dashboard as below. The Circuit Open will be enabaled when the system sense there is more than 50% of request is unsuccessful/errored while connecting to external / DB.
 ![Hystrix](src/main/resources/images/Hystrix.PNG)
+
+•    Completeness:  Were problems addressed, did the code run? - Yes. Is it production ready (if not, explain why) 
+•    Do you have any examples of design work? - Yes attached above.
+•    Have you done any work where you have had to scale your code? - Yes, Implemented caching, fault torence design. 
+•    Testing—how did you test? - Unit test and Manual functional validation
+
+### Production Readiness
+Though this code is production ready, considering the CASE Study supporting 200 retails stores. I recommend the below prior to PROD.
+Recommendation for Production Ready:
+-   Authentication/Authorization using oAuth2.0
+-   Cassandra / Reddis Database for High throughput.
+-   Memcache or Persistence Reddis caching strategy to support high throughput.
+
