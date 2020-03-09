@@ -4,7 +4,7 @@ myRetail is a rapidly growing company with HQ in Richmond, VA and over 200 store
 The goal for this project is to create an end-to-end Proof-of-Concept for a products API, which will aggregate product data from multiple sources and return it as JSON to the caller.
 ## Playbook Instructions
 ### Pre Requisite
-Java 8 or 11 and Gradle 5 Installation
+    Java 8 or 11 and Gradle 5 Installation
 
 ### Local Code Set up & Deployment
 1. Clone the Project : https://github.com/kalairaja/myRetail-product-dtls.git
@@ -48,8 +48,13 @@ See Swagger <http://localhost:8883/swagger-ui.html#/>.
 ### Sonar Code Review and Vulneranbility check (Done)
 
 ### Test Approach
+
+#### Testing
+Integration test covers most of the scenario. Mockito & RestAssured been used to mock the redsky service and embedded mango db to retrieve the data from datastore.
+
 #### Junit Test Result / Code Coverage
 ![UnitTest](src/main/resources/images/UnitTestResult.PNG)
+
 
 #### Use Swagger Test
 Url <http://localhost:8083/swagger-ui.html> to test the application.
@@ -59,15 +64,14 @@ Input browser with <http://localhost:8883/hystrix>, Enter hystrix stream Url as 
 Trigger a GET or PUT call. You will be able to see the Hystrix Dashboard as below. The Circuit Open will be enabaled when the system sense there is more than 50% of request is unsuccessful/errored while connecting to external / DB.
 ![Hystrix](src/main/resources/images/Hystrix.PNG)
 
-•    Completeness:  Were problems addressed, did the code run? - Yes. Is it production ready (if not, explain why) 
+•    Completeness:  Were problems addressed, did the code run? - Yes. Is it production ready (if not, explain why) - Yes
 •    Do you have any examples of design work? - Yes attached above.
 •    Have you done any work where you have had to scale your code? - Yes, Implemented caching, fault torence design. 
 •    Testing—how did you test? - Unit test and Manual functional validation
 
-### Production Readiness
+### Production Recommendations:
 Though this code is production ready, considering the CASE Study supporting 200 retails stores. I recommend the below prior to PROD.
 Recommendation for Production Ready:
 -   Authentication/Authorization using oAuth2.0
 -   Cassandra / Reddis Database for High throughput.
 -   Memcache or Persistence Reddis caching strategy to support high throughput.
-
