@@ -70,6 +70,8 @@ Url <http://localhost:8083/swagger-ui.html> to test the application.
 Input browser with <http://localhost:8883/hystrix>, Enter hystrix stream Url as <http://localhost:8089/monitor/hystrix.stream> .
 Trigger a GET or PUT call. You will be able to see the Hystrix Dashboard as below. The Circuit Open will be enabaled when the system sense there is more than 50% of request is unsuccessful/errored while connecting to external / DB.
 ![Hystrix](src/main/resources/images/Hystrix.PNG)
+
+### Hystrix Circuit Opened
 ![Hystrix](src/main/resources/images/HystrixOpen.PNG)
 
 
