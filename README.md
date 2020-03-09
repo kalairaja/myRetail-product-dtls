@@ -83,7 +83,7 @@ Trigger a GET or PUT call. You will be able to see the Hystrix Dashboard as belo
 
 ### Production Recommendations:
 Though this code is production ready, considering the CASE Study supporting 200 retails stores. I recommend the below prior to PROD.
-Recommendation for Production Ready:
+#### Recommendation for Production Ready:
 -   Authentication/Authorization using oAuth2.0
 -   Cassandra / Reddis Database for High throughput.
 -   Memcache or Persistence Reddis caching strategy to support high throughput.
