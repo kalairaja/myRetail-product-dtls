@@ -28,15 +28,15 @@ The goal for this project is to create an end-to-end Proof-of-Concept for a prod
 ## Design, Development, Build, Deploy and Test Approach
 To the given problem, Spring Boot architecture would be the preferred design for A fast, lightweight and more productive micro-services framework. The following technologies has been considered for the approach.
 ### Technologies
-- Java8 or 11 - Programming Lanugage
-- Gradle - Build Framework
-- Spring Boot 2.1.4 - Spring Framework
-- Embedded Mongo DB - NoSQL DB
-- EhCache - Caching Strategy for API
-- Hystrix Circuit Breaker - Cross Cutting Concern
-- Hystrix Dashboard 
-- Swagger2 - API Documentation
-- Rx Java - Reactive and Event Driven Programming
+    - Java8 or 11 - Programming Lanugage
+    - Gradle - Build Framework
+    - Spring Boot 2.1.4 - Spring Framework
+    - Embedded Mongo DB - NoSQL DB
+    - EhCache - Caching Strategy for API
+    - Hystrix Circuit Breaker - Cross Cutting Concern
+    - Hystrix Dashboard 
+    - Swagger2 - API Documentation
+    - Rx Java - Reactive and Event Driven Programming
 ### Architecture Style
 ![Arch](src/main/resources/images/Arch_Style.PNG)
 ### Sequence Diagram
