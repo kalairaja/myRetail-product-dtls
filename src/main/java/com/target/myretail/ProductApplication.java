@@ -12,10 +12,10 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableCircuitBreaker
 @EnableHystrixDashboard
 @EnableCaching
-@ComponentScan({ "com.target.myretail.circuit", "com.target.myretail.controller", "com.target.myretail.dao", "com.target.myretail.model",
-	"com.target.myretail.exception","com.target.myretail.dto","com.target.myretail.service","com.target.myretail.config"})
+@ComponentScan({"com.target.myretail.circuit", "com.target.myretail.controller", "com.target.myretail.dao", "com.target.myretail.model",
+        "com.target.myretail.exception", "com.target.myretail.dto", "com.target.myretail.service", "com.target.myretail.config"})
 public class ProductApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(ProductApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ProductApplication.class, args);
+    }
 }

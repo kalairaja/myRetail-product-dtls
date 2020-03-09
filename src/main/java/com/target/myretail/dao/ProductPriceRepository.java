@@ -1,9 +1,9 @@
 package com.target.myretail.dao;
 
 
+import com.target.myretail.model.ProductPrice;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import com.target.myretail.model.ProductPrice;
-
-public interface ProductPriceRepository extends MongoRepository<ProductPrice, Long> {}
+public interface ProductPriceRepository extends MongoRepository<ProductPrice, Long> {
+}
 

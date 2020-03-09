@@ -4,17 +4,17 @@
          monitoring="autodetect"
          dynamicConfig="true">
 
-    <diskStore path="java.io.tmpdir" />
+    <diskStore path="java.io.tmpdir"/>
 
     <cache name="productPriceCache"
            maxEntriesLocalHeap="10000"
            maxEntriesLocalDisk="1000"
            eternal="false"
            diskSpoolBufferSizeMB="20"
-           timeToIdleSeconds="300" timeToLiveSeconds="30"
+           timeToIdleSeconds="300" timeToLiveSeconds="10"
            memoryStoreEvictionPolicy="LFU"
            transactionalMode="off">
-        <persistence strategy="localTempSwap" />
+        <persistence strategy="localTempSwap"/>
     </cache>
 
 </ehcache>
