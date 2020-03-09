@@ -72,10 +72,12 @@ Trigger a GET or PUT call. You will be able to see the Hystrix Dashboard as belo
 ![Hystrix](src/main/resources/images/Hystrix.PNG)
 ![Hystrix](src/main/resources/images/HystrixOpen.PNG)
 
-•    Completeness:  Were problems addressed, did the code run? - Yes. Is it production ready (if not, explain why) - Yes
-•    Do you have any examples of design work? - Yes attached above.
-•    Have you done any work where you have had to scale your code? - Yes, Implemented caching, fault torence design. 
-•    Testing—how did you test? - Unit test and Manual functional validation
+
+
+-   Completeness:  Were problems addressed, did the code run? - Yes. Is it production ready (if not, explain why) - Yes
+-   Do you have any examples of design work? - Yes attached above.
+-   Have you done any work where you have had to scale your code? - Yes, Implemented caching, fault torence design. 
+-   Testing—how did you test? - Unit test and Manual functional validation
 
 ### Production Recommendations:
 Though this code is production ready, considering the CASE Study supporting 200 retails stores. I recommend the below prior to PROD.
