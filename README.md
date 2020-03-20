@@ -16,7 +16,7 @@ The goal for this project is to create an end-to-end Proof-of-Concept for a prod
     GET 
         URI: http://localhost:8883/retail/products/{id}
         Product {id}: 13860428,13860500,13860600
-        curl -X GET "http://localhost:8883/retail/products/13860428" -H "accept: application/json"
+        curl -X GET "http://localhost:8883/retail/products/13860428" -H "accept: application/json" -H "X-CLIENT-ID: TGT"
 
 
     PUT 
@@ -28,9 +28,7 @@ The goal for this project is to create an end-to-end Proof-of-Concept for a prod
               "currency_code": "USD"
               }
         }
-        curl -X PUT "http://localhost:8883/retail/products/13860428" -H "accept: application/json" -H 
-        "Content-Type: application/json" -d "{     \"current_price\": 
-        { \"value\": 700.00, \"currency_code\": \"USD\" }}"
+        curl -X PUT "http://localhost:8883/retail/products/13860428" -H "accept: application/json" -H "X-CLIENT-ID: tat" -H "Content-Type: application/json" -d "{ \"current_price\": { \"value\": 666.99, \"currency_code\": \"USD\" }}"
 
 ## Design, Development, Build, Deploy and Test Approach
 To the given problem, Spring Boot architecture would be the preferred design for A fast, lightweight and more productive micro-services framework. The following technologies has been considered for the approach.
@@ -44,7 +42,7 @@ To the given problem, Spring Boot architecture would be the preferred design for
     - Hystrix Dashboard 
     - Swagger2 - API Documentation
     - Rx Java - Reactive and Event Driven Programming
-### Architecture Style
+### Architecture Design Style
 ![Arch](src/main/resources/images/Arch_Style.PNG)
 ### Sequence Diagram
 ![Sequence](src/main/resources/images/Microservice-seq.PNG)
