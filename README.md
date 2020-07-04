@@ -22,7 +22,7 @@ The goal for this project is to create an end-to-end Proof-of-Concept for a prod
     PUT 
         URI: http://localhost:8883/retail/products/13860428
         PUT Request Body: {
-              "id": 13860428
+              "id": 13860428,
               "current_price": {
               "value": 106.99,
               "currency_code": "USD"
